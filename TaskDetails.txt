@@ -1,0 +1,8 @@
+We have completed all the required tasks as below:
+1. Assign Task To Member
+2. Create New Task
+3. Complete Task
+4. Complete Task for Member
+5. Display member avatar in the task list, if the task is already assigned.
+
+Remark: For "Assign Task To Member" using drag and drop functionality, the code is not with the proper standard. We have to call inline javascript. It should be using JSRuntime import to match the coding standard, but it requires some time to research on the same.
