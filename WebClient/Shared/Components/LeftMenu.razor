@@ -96,7 +96,7 @@
     {
         @foreach (var item in MenuItems)
         {
-            <div ondrop='event.preventDefault(); var tid = event.dataTransfer.getData("id"); $.ajax({ type: "PUT", url: "https://localhost:5001/api/Tasks/"+ tid + "/" + "@item.referenceId", data: "{}", contentType: "application/json;", dataType: "json", success: function (data) { alert("Task assigned! Please refresh page.") } });' ondragover='event.preventDefault()' class="menu-item col-10 offset-1 p-3 my-4 p-sm-2 @(item.isActive ? "active" : "")" @onclick="@(e => SelectMember(item.referenceId))">
+            <div ondrop='event.preventDefault(); var tid = event.dataTransfer.getData("id"); $.ajax({ type: "PUT", url: "https://localhost:5001/api/Tasks/"+ tid + "/" + "@item.referenceId", data: "{}", contentType: "application/json;", dataType: "json", success: function (data) { alert("Task assigned!") } }); location.reload();' ondragover='event.preventDefault()' class="menu-item col-10 offset-1 p-3 my-4 p-sm-2 @(item.isActive ? "active" : "")" @onclick="@(e => SelectMember(item.referenceId))">
                 @if (item.iconColor != null)
                 {
                     <div class="avtar mr-3" style="background-color: @(item.iconColor);"> </div>
